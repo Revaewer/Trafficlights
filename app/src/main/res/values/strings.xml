@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Traffic lights</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="text_view_light_off">Traffic Light Off</string>
+    <string name="about_text">Hello. I, Traffic Light App</string>
+    <string name="about_title">About App</string>
+    <string name="messenger">Messenger</string>
+    <string name="transfer">Transfer</string>
+    <string name="transfer_data_activity_title">Data Transfer</string>
+    <string name="plain_text_whom">Whom</string>
+    <string name="plain_text_description">Description</string>
+    <string name="toast_to_exit">Press once again to exit</string>
+    <string name="test_worker">This is Worker</string>
+</resources>

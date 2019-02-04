@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Светофор</string>
+    <string name="red" translatable="false">Красный</string>
+    <string name="yellow" translatable="false">Желтый</string>
+    <string name="green" translatable="false">Зеленый</string>
+    <string name="text_view_light_off">Светофор выключен</string>
+    <string name="about_text">Привет. Я, приложение \"Светофор\"</string>
+    <string name="about_title">О приложении</string>
+    <string name="messenger">Mессенджер</string>
+    <string name="transfer">Передать</string>
+    <string name="transfer_data_activity_title">Передача данных</string>
+    <string name="plain_text_whom">Кому</string>
+    <string name="plain_text_description">Описание</string>
+    <string name="toast_to_exit">Нажмите еще раздля выхода</string>
+    <string name="test_worker">Работает</string>
+</resources>

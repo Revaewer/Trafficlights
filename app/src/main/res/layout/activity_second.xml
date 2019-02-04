@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <EditText
+        android:id="@+id/edit_text_whom"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:autofillHints="@string/plain_text_whom"
+        android:ems="10"
+        android:hint="@string/plain_text_whom"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/edit_text_desc"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints="@string/plain_text_description"
+        android:ems="10"
+        android:hint="@string/plain_text_description"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edit_text_whom"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_whom"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_whom"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/transfer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edit_text_desc"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_desc"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_desc"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
