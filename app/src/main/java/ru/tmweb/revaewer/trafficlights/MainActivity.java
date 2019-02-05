@@ -12,7 +12,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private TextView mInfoTextView;
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         trafficLightIcon = findViewById(R.id.iBTrafficLight);
         trafficLightIcon.setBackgroundTintList(getResources().getColorStateList(R.color.colorGrey));
 
-
         // Обработчик сразу для 3х кнопок. Объявление делается обязательно в методе OnCreate
         final Button redButton = findViewById(R.id.btn_red);
         final Button yellowButton = findViewById(R.id.btn_yellow);
@@ -44,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         redButton.setOnClickListener(this);
         yellowButton.setOnClickListener(this);
         greenButton.setOnClickListener(this);
-
 
     }
 
@@ -107,7 +104,4 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         back_pressed = System.currentTimeMillis();
     }
 
-    //Intent About Activity
-    //Intent AboutStartActivity = new Intent(MainActivity.this, AboutActivity.class);
-    //startActivity(AboutStartActivity);
 }

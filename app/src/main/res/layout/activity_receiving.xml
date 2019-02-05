@@ -7,19 +7,68 @@
     tools:context=".ReceivingActivity">
 
     <TextView
-        android:id="@+id/infoReceivingTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/labelFormFrom"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text=""
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:labelFor="@+id/TextViewUFrom"
+        android:text="@string/label_from_whom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextViewUFrom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/labelFormFrom"
+        app:layout_constraintStart_toStartOf="@+id/labelFormFrom"
+        app:layout_constraintTop_toBottomOf="@+id/labelFormFrom"
+        tools:text="@string/plain_text_whom" />
+
+    <TextView
+        android:id="@+id/labelFormWhom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/plain_text_whom"
+        app:layout_constraintEnd_toEndOf="@+id/labelFormFrom"
+        app:layout_constraintStart_toStartOf="@+id/labelFormFrom"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewUFrom" />
+
+    <TextView
+        android:id="@+id/TextViewUFor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/labelFormWhom"
+        app:layout_constraintStart_toStartOf="@+id/labelFormWhom"
+        app:layout_constraintTop_toBottomOf="@+id/labelFormWhom"
+        tools:text="@string/label_for_someone" />
+
+    <TextView
+        android:id="@+id/labelFormDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/mess"
+        app:layout_constraintEnd_toEndOf="@+id/labelFormFrom"
+        app:layout_constraintStart_toStartOf="@+id/labelFormFrom"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewUFor" />
+
+    <TextView
+        android:id="@+id/TextViewUDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/labelFormDesc"
+        app:layout_constraintStart_toStartOf="@+id/labelFormDesc"
+        app:layout_constraintTop_toBottomOf="@+id/labelFormDesc"
+        tools:text="@string/mess" />
+
 </android.support.constraint.ConstraintLayout>

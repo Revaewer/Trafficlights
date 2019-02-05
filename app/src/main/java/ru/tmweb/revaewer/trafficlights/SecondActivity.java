@@ -9,43 +9,35 @@ import android.widget.EditText;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText userEditText;
-    private EditText descEditText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-
-        EditText editTextWhom = findViewById(R.id.edit_text_whom);
-        EditText editTextDesc = findViewById(R.id.edit_text_desc);
-        final Button btnSend = findViewById(R.id.btn_send);
-
+        //Send form SecondActivity btn_sent - OnClickListener
+        final Button btnSend = findViewById(R.id.btnSend);
         btnSend.setOnClickListener (this);
 
     }
 
-    //*
     public void onClick(View v){
         switch (v.getId()) {
-            case R.id.btn_send:
-                //*
-                userEditText = findViewById(R.id.edit_text_whom);
-                descEditText = findViewById(R.id.edit_text_desc);
-                //*/
+            case R.id.btnSend:
+
+                EditText uFromEditText = findViewById (R.id.editTextYouName);
+                EditText uForEditText = findViewById (R.id.editTextWhom);
+                EditText uDescEditText = findViewById (R.id.editTextDesc);
+
                 Intent ReceivingStartActivity = new Intent(SecondActivity.this, ReceivingActivity.class);
-                //*
-                ReceivingStartActivity.putExtra("username", userEditText.getText().toString());
-                ReceivingStartActivity.putExtra("gift", descEditText.getText().toString());
-                //*/
+
+                ReceivingStartActivity.putExtra("uFrom", uFromEditText.getText().toString());
+                ReceivingStartActivity.putExtra("uFor", uForEditText.getText().toString());
+                ReceivingStartActivity.putExtra("uDesc", uDescEditText.getText().toString());
+
                 startActivity(ReceivingStartActivity);
             break;
         }
 
     }
-
-
-    //*/
 
 }
