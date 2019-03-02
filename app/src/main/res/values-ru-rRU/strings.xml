@@ -20,4 +20,15 @@
     <string name="label_from_whom">От кого</string>
     <string name="label_for_someone">Для кого</string>
     <string name="mess">Сообщение</string>
+    <string name="text_recevity_info">Поступлений пока что не было</string>
+    <string name="title_recevity">Моя зарплата</string>
+    <string name="title_seccond">Новое поступление</string>
+    <string name="gender">Пол</string>
+    <string name="age">Возраст</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_save">Сохранить</string>
+    <string name="action_delete">Удалить</string>
+    <string name="gender_unknown">Неизвестно</string>
+    <string name="gender_male">Кот</string>
+    <string name="gender_female">Кошка</string>
 </resources>

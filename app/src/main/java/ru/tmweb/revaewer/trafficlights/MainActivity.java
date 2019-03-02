@@ -1,6 +1,7 @@
 package ru.tmweb.revaewer.trafficlights;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -20,8 +21,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     // Double Back to exit
     private static long back_pressed;
 
+    // Notification ID
+    //private static final int NOTIFY_ID = 121;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Set PORTRAIT orientation for this Activity
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -58,10 +64,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         int id = item.getItemId();
 
         switch (id) {
+            // Вызываем ReceivingActivity - список данных с кнопкой FloatingActionButton
             case R.id.itemMenuActionBarSend:
                 //Intent SecondActivity
-                Intent SecondStartActivity = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(SecondStartActivity);
+                Intent ReceivingActivity = new Intent(MainActivity.this, ReceivingActivity.class);
+                startActivity(ReceivingActivity);
                 break;
             case R.id.itemMenuActionBarAbout:
                 //Intent About Activity
@@ -96,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     }
 
-    // Double Back to exit
+    // Double tar on Backward to exit
     @Override
     public void onBackPressed() {
         if (back_pressed + 2000 > System.currentTimeMillis()) super.onBackPressed();
