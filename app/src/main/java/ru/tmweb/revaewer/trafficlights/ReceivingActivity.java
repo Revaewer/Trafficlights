@@ -10,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 import ru.tmweb.revaewer.trafficlights.data.TrafficContract.GuestEntry;
 import ru.tmweb.revaewer.trafficlights.data.TrafficDbHelper;
@@ -82,7 +83,46 @@ public class ReceivingActivity extends AppCompatActivity {
                 null            // Порядок сортировки
         );
 
+        TextView displayTextView = findViewById (R.id.textViewRecevityInfo);
 
+
+        try{
+            displayTextView.setText ("Таблица содердит " + cursor.getCount () + " Гостей\n\n");
+            displayTextView.append (GuestEntry._ID + " - " +
+                    GuestEntry.COLUMN_NAME + " - " +
+                    GuestEntry.COLUMN_CITY + " - " +
+                    GuestEntry.COLUMN_GENDER + " - " +
+                    GuestEntry.COLUMN_AGE + "\n"
+            );
+
+            // Индексы столбцов
+            int idColumnIndex = cursor.getColumnIndex (GuestEntry._ID);
+            int nameColumnIndex = cursor.getColumnIndex (GuestEntry.COLUMN_NAME);
+            int cityColumnIndex = cursor.getColumnIndex (GuestEntry.COLUMN_CITY);
+            int genderColumnIndex = cursor.getColumnIndex (GuestEntry.COLUMN_GENDER);
+            int ageColumnIndex = cursor.getColumnIndex (GuestEntry.COLUMN_AGE);
+
+            // Проход по всем рядам
+            while (cursor.moveToNext ()) {
+                // Использование индекса для получения строки или числа
+                int currentID = cursor.getInt (idColumnIndex);
+                String currentName = cursor.getString (nameColumnIndex);
+                String currentCity = cursor.getString (cityColumnIndex);
+                int currentGender = cursor.getInt (genderColumnIndex);
+                int currentAge = cursor.getInt (ageColumnIndex);
+
+                // вывод на экран
+                displayTextView.append ("\n" + currentID + " - " +
+                        currentName + " - " +
+                        currentCity + " - " +
+                        currentGender + " - " +
+                        currentAge);
+            }
+
+        } finally {
+            // Закрытие курсора после чтения
+            cursor.close ();
+        }
     }
 
     // ActionBar BackButton onBackPressed
